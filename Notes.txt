@@ -12,14 +12,23 @@ Error: That IP address can't be assigned to.
 - This means the network configuration is not be able to ping their own machine (loopback interface).
 -- https://stackoverflow.com/a/14042409
 
-how to push to github
-- add the file by using : "git add ."
-- check the tracked file by using "git status"
-- On the /django-apps, run git commit -m "The commit message"
+- how to push to github
+-- add the file by using : "git add ."
+-- check the tracked file by using "git status"
+-- On the /django-apps, run git commit -m "The commit message"
 -- push to master branch: git push origin master
 
-git fetch origin
-git merge origin master
-
+---- git fetch origin
+---- git merge origin master
 -- Both command can be run using this command:
 git pull origin master
+
+Avoid putting Username/Password every single commit
+-If you already have your SSH keys set up and are still getting the password prompt, make sure your repo URL is in the form
+- git+ssh://git@github.com/username/reponame.git
+- as opposed to
+-- https://github.com/username/reponame.git
+- To see your repo URL, run:
+- git remote show origin
+-You can change the URL with git remote set-url like so:
+----git remote set-url origin git+ssh://git@github.com/username/reponame.git
