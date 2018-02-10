@@ -1,3 +1,8 @@
+- How to run the server
+-- Activate virtualenv: django-apps/env/bin/activate
+-- Run server: python3 django-apps/testsite/manage.py runserver 172.16.0.101:8000
+
+
 Ubuntu can't do apt-get:
 - Turns out the server trying to connect to ubuntu using IPv6. The solution is to change the default on gai.conf in /etc/gai.conf and uncomment "precedence ::ffff:0:0/96 100" so it will try to use only IPv4.
 -- https://askubuntu.com/a/575130
