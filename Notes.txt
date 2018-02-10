@@ -1,0 +1,25 @@
+Ubuntu can't do apt-get:
+- Turns out the server trying to connect to ubuntu using IPv6. The solution is to change the default on gai.conf in /etc/gai.conf and uncomment "precedence ::ffff:0:0/96 100" so it will try to use only IPv4.
+-- https://askubuntu.com/a/575130
+
+- pip3 install virtualenv does not installed to /usr/local/bin. So I need to "sudo pip3 install virtualenv" so it installed as root to bin folder
+-- https://stackoverflow.com/a/37242519
+
+You have 14 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+Error: That IP address can't be assigned to.
+- This means the network configuration is not be able to ping their own machine (loopback interface).
+-- https://stackoverflow.com/a/14042409
+
+how to push to github
+- add the file by using : "git add ."
+- check the tracked file by using "git status"
+- On the /django-apps, run git commit -m "The commit message"
+-- push to master branch: git push origin master
+
+git fetch origin
+git merge origin master
+
+-- Both command can be run using this command:
+git pull origin master
