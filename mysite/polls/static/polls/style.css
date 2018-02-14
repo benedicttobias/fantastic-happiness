@@ -1,0 +1,10 @@
+li a {
+	color: green;
+}
+
+body {
+	background-image: url("images/background.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
