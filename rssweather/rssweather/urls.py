@@ -14,11 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 from . import views
 
 app_name = 'weather'
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('weather/<int:latitude>,<int:longitude>/', views.weather, name='weather'),
+   # path('weather/<int:latitude>,<int:longitude>/', views.weather, name='weather'),
+    re_path('weather/(?P<longitudelatitude>[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),(\s*)[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?))', views.weather, name='weather'),
 ]
